@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
+
+:root{
+  /*Colors*/
+--darkGreen:#1D272B;
+--lightGreen:#344951;
+--green:#2BA635;
+--paleGreen:#F3F9F5;
+--lightGray:#C9D9E2;
+--bgGray:#F7F7F7;
+--gray:#5D6F79;
+--orange:#FF9011;
+--red:#FA160A;
+--yellow:#FEC849;
+--blue:#128EDE;
+--white:#FFF;
+--black:#000;
+
+}
+
+/*----------Global--------*/
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  list-style-type: none;
+  padding:0;
+  margin:0;
+}
+
+a {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--white);
+  text-decoration: none;
+}
+a:hover{
+  color: var(--white);
+}
+.container {
+  width: 996px;
+  margin: auto;
+}
+
+/*--------Navigation------*/
+.nav{
+  background-color: var(--darkGreen);
+}
+.nav-menu .nav-brand{
+  padding: 18px 0px;
+  margin-right: 111px;
+}
+.nav-menu .nav-brand a{
+  font-size: 16px;
+}
+.nav-menu .nav-brand a span {
+  color: var(--red);
+  font-size: 20px;
+  font-weight: 600;
+}
+.nav-menu .nav-items {
+  margin: 0;
+}
+.nav-menu .nav-items .nav-link {
+  padding: 20px 25px;
+}
+.nav-menu .nav-items .nav-link:hover{
+  background-color: var(--lightGreen);
+}
+.nav-menu .nav-items .nav-link a {
+  font-size: 12px;
+  font-weight: 600;
+}
+.nav .icons {
+  padding: 20px 0px;
+}
+.nav .icons i{
+  color: var(--white);
+  margin-left: 30px;
+}
+/*--------Carousel------*/
+
+.carousel .carousel-inner .carousel-item{
+  height: 478px;
+  background: no-repeat scroll center scroll;
+  background-size: cover;
+  position: relative;
+}
+/*Gradient-Overlay*/
+.carousel-item:before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to right, var(--darkGreen), transparent);
+}
+
+.carousel-caption{
+  position: absolute;
+  text-align: left;
+  top: 85px;
+}
+
+.carousel-caption h1{
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/*--------Number Order Area------*/
+
+.number-area {
+  font-size: 12px;
+  height: auto;
+  background-color: var(--paleGreen);
+}
+.number-area .col-4 {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+.number-area .number-and-line .number{
+  display: inline-block;
+  background-color: var(--green);
+  width: 39px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+}
+.number-area .number-and-line .number p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+}
+.number-area .number-and-line hr{
+  width: 100%;
+  border: 1px solid var(--darkGreen);
+  margin-left: 10px;
+}
+
+.number-area .content {
+  margin-top: 22px;
+}
+
+/*--------Card Slider------*/
+
+.card-slider .title-area {
+  margin-top: 48px;
+}
+.title-area .title-text h2{
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 23px;
+  margin-right: 25px;
+  text-transform: uppercase;
+}
+.title-area .title-text p{
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+.dots{
+  font-size: 12px;
+}
+.dots i{
+  color: var(--lightGray);
+  margin-left: 10px;
+}
+.dots i:first-child{
+  color: var(--orange);
+}
+.card-slider{
+  padding-bottom: 43px;
+}
+.card-slider .cards .card{
+  margin-right: 25px;
+  border-radius: 4px 4px 4px 4px;
+  outline: none;
+}
+.card-slider .cards .card img {
+  width: auto;
+  height: 158px;
+  object-fit: cover;
+  overflow: hidden;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.card-slider .cards .card .card-body{
+  font-size: 11px;
+  padding: 20px 19px;
+  height: auto;
+  border: 2px solid var(--paleGreen);
+  outline: none;
+}
+.card .card-body .card-title{
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.card-body .card-info .card-info-row{
+  margin-bottom: 10px;
+}
+.card-body .card-info .card-info-row p{
+  margin-bottom: 0;
+}
+.card-body .card-info i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin-right: 15px;
+}
+.cards .card .card-body .btn{
+  padding: 5px 15px;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: var(--white);
+  color: var(--green);
+  border: 1.5px solid var(--green);
+  width: 100%;
+}
+.cards .card .card-body .btn.green{
+  background-color: var(--green);
+  color: var(--white);
+  box-shadow: 1px 2px 8px .2px var(--green);
+  border: 1px solid var(--green);
+}
+
+/*--------Call Area------*/
+.call-area {
+  height: 365px;
+  width: auto;
+  overflow: hidden;
+  position: relative;
+}
+.call-area .card .image-area{
+  overflow: hidden;
+}
+.call-area .card .image-area img{  
+  height: auto;
+  width: 100%;
+}
+.call-area .card .text-area{  
+  background-color: var(--darkGreen);
+}
+.call-area .card .card-body{
+  padding: 30px 26px 80px 80px;
+  color: var(--paleGreen);
+  
+  font-weight: 600;
+}
+.call-area .card .card-body .card-title{
+  font-size: 20px;
+  color: var(--yellow);
+  margin-bottom: 15px;
+}
+.call-area .card .card-body .card-ul{
+  list-style: none;
+  margin-bottom: 20px;
+  padding-left: 0px;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 25px;
+}
+.call-area .card .card-body .card-ul span{
+  font-weight: 500;
+}
+.call-area .card .card-body .card-ul li::before {
+  content: "\2022";
+  color: var(--yellow);
+  font-weight: bold;
+  font-size: 12px;
+  display: inline-block; 
+  margin-right: 10px;
+}
+.call-area .card .card-body .card-btn{
+  width: 342px;
+  height: 42px;
+  font-size: 13px;
+  font-weight: 700;
+  background: linear-gradient(to right,var(--orange), var(--yellow));
+  padding: 16px 78px;
+  border-radius: 5px;
+}
+.call-area .card .card-body .card-btn p{
+  margin-top: 12px;
+  margin-right: 12px;
+}
+.call-area .call-icon{
+  overflow: hidden;
+  background-color: var(--blue);
+  width: 105px;
+  height: 105px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
+.call-area .call-icon i{
+  position: absolute;
+  top: 20px;
+  font-size: 60px;
+  color: var(--white);
+}
+
+/*--------Service Area------*/
+#postsCarousel{
+  position: relative;
+}
+
+#postsCarousel .btn.prev{
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  font-size: 40px;
+  color: var(--paleGreen);
+}
+
+#postsCarousel .btn.next{
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  font-size: 40px;
+  color: var(--darkGreen);
+}
+#postsCarousel .row-equal{
+  width: 100%;
+}
+.row-equal .card {
+   width: 315px;
+   height: auto;
+}
+.service-area .carousel-inner .card .card-img-top{
+  width: auto;
+  height: 234px;
+}
+.service-area .carousel-inner .card .card-block{
+  padding-left: 20px;
+  padding-bottom: 18px;
+}
+.service-area .carousel-inner .card .card-title h3{
+  font-size: 12px;
+  font-weight: 600;
+}
+.service-area .carousel-inner .card  .card-text {
+  font-size: 10px;
+}
+.carousel-inner>.row-equal.active, 
+.carousel-inner>.row-equal.next, 
+.carousel-inner>.row-equal.prev {
+    display: flex;
+}
+
+.card-img-top-250 {
+    max-height: 250px;
+    overflow:hidden;
+}
+
+.service-area .carousel-inner .card .btn{
+  padding: 5px 15px;
+  margin: 0px 20px 20px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: var(--white);
+  color: var(--green);
+  border: 1.5px solid var(--green);
+}
+.service-area .carousel-inner .card .btn.green{  
+  margin: 0px 20px 20px 20px;
+  background-color: var(--green);
+  color: var(--white);
+  box-shadow: 1px 2px 8px .2px var(--green);
+  border: 1px solid var(--green);
+}
+
+/*--------Client Experience------*/
+
+.client {
+  height: auto;
+  background-color: var(--bgGray);
+}
+.client .comments{
+  width: 100%;
+  position: relative;
+}
+.client .comments .col-6{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.client .col-6 h1{
+  text-transform: uppercase;
+}
+.client .row .col-6 .link{
+  text-decoration: underline;
+  color: var(--blue);
+}
+.client .row button {
+  border: 1px solid var(--green);
+  color: var(--green);
+  width: 256px;
+  height: 35px;
+}
+.client .row .corner-left-bottom {
+  position: absolute;
+  bottom: -15px;
+  left: 13px;
+  width: 90px;
+  height: 90px;
+  border-left: 5px solid var(--lightGray);
+  border-bottom: 5px solid var(--lightGray);
+}
+.client .row .corner-right-top {
+  position: absolute;
+  top: 50px;
+  left: 380px;
+  width: 90px;
+  height: 90px;
+  border-right: 5px solid var(--lightGray);
+  border-top: 5px solid var(--lightGray);
+}
+.client .row .quote {
+  color: var(--orange);
+  position: absolute;
+  top: 45px;
+  left: 12px;
+}
+.client .row .stars {
+  position: absolute;
+  color: var(--orange);
+  left: 310px;
+  bottom: -25px;
+}
+
+.client .row .corner-left-bottom-2 {
+  position: absolute;
+  bottom: -15px;
+  right: 390px;
+  width: 90px;
+  height: 90px;
+  border-left: 5px solid var(--lightGray);
+  border-bottom: 5px solid var(--lightGray);
+}
+.client .row .corner-right-top-2 {
+  position: absolute;
+  top: 50px;
+  right: -30px;
+  width: 90px;
+  height: 90px;
+  border-right: 5px solid var(--lightGray);
+  border-top: 5px solid var(--lightGray);
+}
+.client .row .quote-2 {
+  color: var(--orange);
+  position: absolute;
+  top: 45px;
+  right: 445px;
+}
+.client .row .stars-2 {
+  position: absolute;
+  color: var(--orange);
+  right: -20px;
+  bottom: -25px;
+}
+
+/*--------Q/A Tabs------*/
+
+
+/*--------Form------*/
+.form{
+  background-image: url("../images/bogaz.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 125px;
+}
+.form-control::placeholder{
+  color:var(--lightGray);
+}
+.form .form-title {
+  padding-top: 150px;
+}
+.form .form-title h1{
+  color: var(--white);
+}
+.form form .btn{
+  width: 100%;
+  background: linear-gradient(to right,var(--orange), var(--yellow));
+  border-radius: 5px;
+  color: var(--white);
+}
+
+/*--------Featres------*/
+.features{
+  background-color: var(--bgGray);
+}
+.features .col-4{
+  padding-right: 0;
+  padding-left: 0;
+}
+.features .col-4 i {
+  color: var(--orange);
+}
+
+/*--------Fotos------*/
+.fotos .row h1{
+  text-transform: uppercase;
+}
+.fotos .row p a{
+  color: var(--blue);
+}
+
+.fotos .foto-row .col{
+  width: 154px;
+  height: 158px;
+  overflow: hidden;
+}
+
+/*--------Footer------*/
+footer{
+  background-color: var(--darkGreen);
+  color: var(--white);
+}
+footer .aboutus {
+  width: 80px;
+}
+footer .services {
+  width: 115px;
+}
+footer .contact {
+  width: 99px;
+}
+footer .website {
+  width: 121px;
+}
+.section-divider {
+  height: 0;
+  border-top: 1px solid var(--lightGreen);
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.section-divider > span {
+  color: var(--lightGreen);
+  background: var(--darkGreen);
+  display: inline-block;
+  position: relative;
+  padding: 0 17px;
+  top: -11px;
+  font-size: 15px;
+}
+footer .copywrite{
+  font-size: 11px;
+  color: var(--lightGreen);
+}
